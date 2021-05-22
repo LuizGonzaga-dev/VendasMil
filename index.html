@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas Mil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cabecalho">
+        <h1>Mil Vendas</h1>
+    </div>
+    <div class="formulario">
+        <div class="boxperguntas">
+            <div class="titulo">
+                <h2>Simulação do valor a ser pago:</h2>
+            </div>
+            <div class="questionarioEresultado">
+                <div class="questionario">
+                    <form action="javascript: enviar();">
+                        <label for="comprimento">
+                            Comprimento da caixa:
+                        </label>
+                        <br>
+                        <input type="text" placeholder="unidade: metros" id="comprimento">
+                        <br>                       
+                        <label for="largura">                           
+                            Largura da caixa:
+                        </label> 
+                        <br>
+                        <input type="text" placeholder="unidade: metros" id="largura">
+                        <br>                        
+                        <label for="profundidade">
+                            Profundidade da caixa:
+                        </label>
+                        <br>
+                        <input type="text" placeholder="unidade: metros" id="profundidade">
+                        <br>
+                        <label for="peso">
+                            Peso de uma unidade do produto:
+                        </label>
+                        <br>
+                        <input type="text" placeholder="unidade: gramas" id="peso">
+                        <br>
+                        <label for="qtd">
+                            Quantidade de produtos:
+                        </label>
+                        <br>
+                        <input type="text" placeholder="Numero inteiro" id="qtd">
+                        <br>                        
+                        <label for="cep">
+                            CEP:
+                        </label>
+                        <br>
+                        <input type="text" placeholder="00000-000" id="cep">
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+                <div class="resultado">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Pedidos</th>
+                                <th>Simulação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>item(s) p/ pedido</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Armz. M3</td>
+                                <td class="armM3"></td>
+                            </tr>
+                            <tr>
+                                <td>Packing</td>
+                                <td class="calPacking"></td>
+                            </tr>
+                            <tr>
+                                <td>Picking</td>
+                                <td class="calcPinking"></td>
+                            </tr>
+                            <tr>
+                                <td>Kilos</td>
+                                <td class="calcPeso"></td>
+                            </tr>
+                            <tr>
+                                <td>Orçamento</td>
+                                <td class="orcamento"></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <script src="./dadosFrete/codigo-por-cep.js"></script>
+    <script src="./dadosFrete/codigoEPeso.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
