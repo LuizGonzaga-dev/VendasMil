@@ -5,7 +5,6 @@ body{
     flex-direction: column;
     height: 100vh;
 }
-
 .cabecalho{
     text-align: center;
 }
@@ -37,7 +36,7 @@ body{
 .questionarioEresultado{
     display: flex;
 }
-.questionario, .resultado{
+.questionario, .resultado, .imagem{
     flex: 1;
 }
 .questionario{
@@ -61,4 +60,178 @@ input{
 }
 .right{
     text-align: right;
+}
+.resultado{
+    display: none;
+}
+.imagem{
+    background-image: url('./images/freteimg.png');
+    background-size: cover;
+    background-position: center;
+}
+.tabelas{
+    display: flex;
+    text-align: center;
+}
+.logistica{
+    margin-left: 0;
+}
+.frete{
+    margin-left: 20px;
+}
+.areaOrcamento{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.preco{
+    font-size: 45px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10%;
+}
+button{
+    width: max-content;
+    margin-top: 15px;
+    height: 35px;
+    border-radius: 11px;
+    cursor: pointer;
+    display: none;
+}
+
+/*
+    Recursividade do site. Apesar de eu ter tentado muito, não consegui deixar como eu queria. Ainda tenho muito o que aprender.
+*/
+
+@media (min-width:1020px) and (max-width:1300px) {
+    
+    form{
+        padding-top: 45px;
+    }
+
+    input{
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+
+    .questionario{
+        height: 300px;
+    }
+
+    .areaOrcamento {
+        padding-top: 10px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1019px) {
+
+    form{
+        padding-top: 75px;
+    }
+
+    input{
+        margin-top: 3px;
+    }
+
+    .questionario, .imagem{
+        height: 300px;
+    }
+
+    .frete table{
+        width: 135px;
+    }
+
+    .logistica{
+        margin-left: -32px;
+    }
+
+    .logistica td{
+        max-width: 75px;
+    }
+
+    .areaOrcamento{
+        margin-left: -32px;
+        padding-top: 0;
+    }
+
+    .areaOrcamento h2{
+        font-size: 20px;
+        margin-left: -14px;
+    }
+
+    .preco{
+        font-size: 30px;
+    }
+}
+
+@media (min-width:425px) and (max-width:767px) {
+
+    .boxperguntas input{
+        margin-top: 6px;
+    }
+
+    .imagem{
+        display: none;
+    }
+    .preco{
+        font-size: 35px;
+    }
+    .button{
+        margin-top: 10px;
+    }
+    .areaOrcamento{
+        padding-top: 0;
+    }
+    .areaOrcamento h2{
+        font-size: 19px;
+    }
+    .tabelas{
+        padding-left: 11px;
+        padding-right: 11px;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media (min-width:300px) and (max-width:424px) {
+
+    body{
+        height: auto;
+    }
+    .boxperguntas{
+        height: 100%;
+    }
+    .boxperguntas, input{
+        margin-top: 6px;
+        margin-bottom: 6px;
+        padding: 5px;
+    }
+    .botao{
+        padding-bottom: 24px;
+    }
+    .tabelas{
+        flex-direction: column;
+        padding-left: 11px;
+        padding-right: 11px;
+        align-items: center;
+    }
+    .preco{
+        font-size: 40px;
+    }
+    .frete{
+        margin-top: 15px;
+    }
+
+    .imagem{
+        display: none;
+    }
+
+    .areaOrcamento{
+        padding-top: 0;
+    }
+    .areaOrcamento h2{
+        font-size: 17px;
+    }   
 }
