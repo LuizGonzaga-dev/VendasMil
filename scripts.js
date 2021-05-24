@@ -66,7 +66,7 @@ function precoFrete(){
     //variavel para armazenar "Geografia Comercial" de acordo com o CEP
     let geoComercial = '';
 
-    for( let i in codigoPorCep ){
+    for( let i = 0; i < codigoPorCep.length; i++ ){
 
         //verifica em qual intervalo esta o CEP do formulario e armazena a "Geografia Comercial" em que se encontra
         if( cep >= codigoPorCep[i]["CEP Inicial"] && cep <= codigoPorCep[i]["CEP Final"]){
@@ -78,17 +78,19 @@ function precoFrete(){
     }
 
     //faz uma verificação caso a "Geografia Comercial" nao tenha sido encontrada
-    if(geoComercial === ''){
+    if(geoComercial == ''){
         alert('CEP não encontrado!');
         return;
     }
     
     //peso unitario convertido para kg
     let massa = (peso*0.001).toFixed(2);
+
     
-    for( let j in codigoePeso ){
+    
+    for( let j = 0; j < codigoePeso.length; j++ ){
         //verifica a "Geografia Comercial" e o intervalo do peso para saber o valor do frete
-        if( geoComercial == codigoePeso[j]["codigo-regiao"] && verificaIntervaloDoPeso(massa, j) === true ){
+        if( geoComercial == codigoePeso[j]["codigo-regiao"] && verificaIntervaloDoPeso(massa, j) == true ){
 
             //preenche a tabela do frete quando encontra o valor do frete a partir da "Geografia Comercial" e do peso do pedido
             document.querySelector('.geoComercial').innerHTML = geoComercial;
@@ -99,8 +101,10 @@ function precoFrete(){
             document.querySelector('.freteTotal').innerHTML = "RS " + (valorFrete*quantidade).toFixed(2).replace('.',',');
             //linha abaixo para sair do loop
             j = codigoePeso.length;
+            
         }
     }
+    
     return;
 }
 
@@ -108,24 +112,14 @@ function precoFrete(){
 function verificaIntervaloDoPeso( peso, indice ){
     
     let pesoMax = (parseFloat(codigoePeso[indice]["peso-maximo"].replace(',','.')));
-    
-    if(indice == 0 ) {
-        if( peso <= pesoMax){
-            return true;
-        }else{
-            return false;
-        }
+    if( peso <= pesoMax ){
+        return true;
     }else{
-
-        if( peso > parseFloat(codigoePeso[indice-1]["peso-maximo"].replace(',','.')) && peso <= pesoMax){
-            return true;
-        }else{
-            return false;
-        }
-    }  
+        return false;
+    }
 }
 
-//armazena os valores do formulário nas variaveis e faz uma verificacao de campos vazios
+//armazena os valores do formulário nas variaveis, verificacao de campos vazios e preenche as tabelas
 function enviar(){
 
     //armazena os dados do formulario nas variais

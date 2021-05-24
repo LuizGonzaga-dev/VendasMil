@@ -103,7 +103,7 @@ Além dos casos acima, desenvolva mais 3 casos para testar sua aplicação. Insi
 * CEP: 1010009
 
 **Saída esperada**:
-* R$45,50
+* R$ 45,50
 
 #### Caso 5 (desenvolvido pelo cadidato):
 **Parâmetros**: 
@@ -113,7 +113,7 @@ Além dos casos acima, desenvolva mais 3 casos para testar sua aplicação. Insi
 * CEP: 6172081
 
 **Saída esperada**:
-* R$66,94
+* R$ 66,94
 
 #### Caso 6 (desenvolvido pelo cadidato):
 **Parâmetros**: 
