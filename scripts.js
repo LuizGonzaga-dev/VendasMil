@@ -85,7 +85,6 @@ function precoFrete(){
     
     //peso unitario convertido para kg
     let massa = (peso*0.001).toFixed(2);
-    alert(massa);
     
     for( let j in codigoePeso ){
         //verifica a "Geografia Comercial" e o intervalo do peso para saber o valor do frete
@@ -94,7 +93,7 @@ function precoFrete(){
             //preenche a tabela do frete quando encontra o valor do frete a partir da "Geografia Comercial" e do peso do pedido
             document.querySelector('.geoComercial').innerHTML = geoComercial;
             document.querySelector('.pesoMaxi').innerHTML = codigoePeso[j]["peso-maximo"]+"g";
-            document.querySelector('.pesoPedido').innerHTML = massa.replace('.',',') +"g";
+            document.querySelector('.pesoPedido').innerHTML = massa.replace('.',',') +"kg";
             valorFrete = (parseFloat(codigoePeso[j]["preco"].replace(',','.')));
             document.querySelector('.valorFrete').innerHTML = "R$ " + codigoePeso[j]["preco"];
             document.querySelector('.freteTotal').innerHTML = "RS " + (valorFrete*quantidade).toFixed(2).replace('.',',');
