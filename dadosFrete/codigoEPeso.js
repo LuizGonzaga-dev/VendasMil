@@ -1,3 +1,4 @@
+//não consegui ler o csv, entao o transformei em um json e armazenei na variavel abaixo para poder utilizá-lo.
 let codigoePeso = [
   {
     "peso-maximo": "0,250",
