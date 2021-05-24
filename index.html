@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Language" content="pt-br">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
     <title>Vendas Mil</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -56,46 +56,88 @@
                         </label>
                         <br>
                         <input type="text" placeholder="00000-000" id="cep">
-                        <input type="submit" value="Enviar">
+                        <input type="submit" value="Enviar" class="botao">
                     </form>
                 </div>
                 <div class="resultado">
-                    <table border="1">
-                        <thead>
-                            <tr>
-                                <th>Pedidos</th>
-                                <th>Simulação</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>item(s) p/ pedido</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td>Armz. M3</td>
-                                <td class="armM3"></td>
-                            </tr>
-                            <tr>
-                                <td>Packing</td>
-                                <td class="calPacking"></td>
-                            </tr>
-                            <tr>
-                                <td>Picking</td>
-                                <td class="calcPinking"></td>
-                            </tr>
-                            <tr>
-                                <td>Kilos</td>
-                                <td class="calcPeso"></td>
-                            </tr>
-                            <tr>
-                                <td>Orçamento</td>
-                                <td class="orcamento"></td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                    <div class="tabelas">
+                        <div class="logistica">
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>Pedidos</th>
+                                        <th>Simulação</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>item(s) p/ pedido</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Armz. M3</td>
+                                        <td class="armM3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Packing</td>
+                                        <td class="calPacking"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Picking</td>
+                                        <td class="calcPinking"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kilos</td>
+                                        <td class="calcPeso"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Logistica</td>
+                                        <td class="orcamento"></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="frete">
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>Variáveis</th>
+                                        <th>Valores</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Geo Comercial</td>
+                                        <td class="geoComercial"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Peso-maximo</td>
+                                        <td class="pesoMaxi"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Peso do pedido</td>
+                                        <td class="pesoPedido"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Frete unitário</td>
+                                        <td class="valorFrete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Frete Total</td>
+                                        <td class="freteTotal"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="areaOrcamento">
+                        <h2>Orçamento final (logistica + frete):</h2>
+                        <div class="preco"></div>
+                        <button onclick="mostrarImagem()">Novo orçamento</button>
+                    </div>
                 </div>
+                <div class="imagem"></div>   
             </div>            
         </div>
     </div>
